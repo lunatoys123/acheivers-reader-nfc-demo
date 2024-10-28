@@ -20,7 +20,10 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.lunatoys.acheivers.reader.nfc"
+      "package": "com.lunatoys.acheivers.reader.nfc",
+      "permissions": [
+        "android.permission.NFC"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -34,6 +37,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e98dbfb8-9934-4ed7-8b42-d04881cb363c"
+      }
     }
   }
 }
