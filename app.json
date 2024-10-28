@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "nativewind-demo",
-    "slug": "nativewind-demo",
+    "name": "nfc-demo",
+    "slug": "nfc-demo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.lunatoys.acheivers.reader.nfc"
     },
     "web": {
       "bundler": "metro",
@@ -27,7 +28,9 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "react-native-nfc-manager",
+      "@react-native-google-signin/google-signin"
     ],
     "experiments": {
       "typedRoutes": true
