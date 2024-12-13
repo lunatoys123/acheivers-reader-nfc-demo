@@ -36,7 +36,6 @@ const CheckIn = () => {
 		const day = String(now.getDate()).padStart(2, "0");
 		const hours = String(now.getHours()).padStart(2, "0");
 		const minutes = String(now.getMinutes()).padStart(2, "0");
-		//const seconds = String(now.getSeconds()).padStart(2, "0");
 
 		return `${year}/${month}/${day} ${hours}:${minutes}`;
 	};
@@ -79,12 +78,12 @@ const CheckIn = () => {
 
 		if(selectedMode == "Punch Out"){
 			const CheckIn = Checkin_data.filter((arr: any[]) => arr[3] == "Punch In" && arr[4] == location);
-			setErrorModal(true);
+		
 			if(CheckIn.length == 0){
+				setErrorModal(true);
                 setErrorText(`Punch In data is required for Punch Out Record`);
+				return;
             }
-			return;
-
 		}
 		
 		if (select_mode_data.length > 0) {
